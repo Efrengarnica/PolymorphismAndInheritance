@@ -10,9 +10,6 @@ public class Employee {
 	private double salary;
 	private int yearsWorked;
 	
-	
-	
-
 	   public Employee(String firstName, String lastName, int registration, int age, int daysWorked, int vacationDaysTaken,
 			double salary, int yearsWorked) {
 		this.firstName = firstName;
@@ -23,51 +20,45 @@ public class Employee {
 		this.vacationDaysTaken = vacationDaysTaken;
 		this.salary = salary;
 		this.yearsWorked = yearsWorked;
-	}
+	   }//constructor
 
-	public int timeToRetirement(){
-		      int  timetoretirement = min((60-age),(40 - yearsWorked));
+	   public int timeToRetirement(){
+		   int  timetoretirement = min((60-age),(40 - yearsWorked));//Math.min((60-age),(40 - yearsWorked)) y ya NO haces la función
 		   return timetoretirement;
-	}
+	   }// timeToRetirement
 
-	private int min(int i, int j) {
-		if(i<j) {
+	   private int min(int i, int j) {  //En la doc de Java en Math.min
+		   if(i<j) {
 			return i;
-		}else {
+		   }else {
 			return j;
-		}
-	}
-
-	public int vacationTimeLeft(){
-		      double vacationtimeleft = (daysWorked/360)*(30 - vacationDaysTaken);
-		      int numeroEntero = (int) Math.round(vacationtimeleft);
-		return numeroEntero;
 		   }
+	   }//min
+
+	   public int vacationTimeLeft(){
+		      double vacationtimeleft = (daysWorked/360)*(30 - vacationDaysTaken);
+		      int numeroEntero = (int)(vacationtimeleft);
+		      return numeroEntero;
+	   }//vacationTimeLeft
 
 	   public double calculateBonus(){
 		       double bonus = 2.2*salary;
-		   return bonus;
-	 }
+		       return bonus;
+	   }//calculateBonus
 
-	public int getRegistration() {
+	   public int getRegistration() {
 		return registration;
-	}
+	   }//getRegistration
 
-	@Override
-	public String toString() {
+	   @Override
+	   public String toString() {
 		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", registration=" + registration
 				+ ", age=" + age + ", daysWorked=" + daysWorked + ", vacationDaysTaken=" + vacationDaysTaken
 				+ ", salary=" + salary + ", yearsWorked=" + yearsWorked + "]";
-	}
+	   }//toString
 
 	
 	
-
-	   
-	 
 	
 	
-	
-	
-	
-}
+}// class Employee

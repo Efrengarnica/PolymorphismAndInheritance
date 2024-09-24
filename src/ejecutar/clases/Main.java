@@ -32,8 +32,8 @@ public class Main {
 		HashMap<Integer, SalesRep> salesTeam= new HashMap<Integer, SalesRep>();
 		SalesManager Aurelio = new SalesManager("Aurelio", "Garnica", 888, 50, 3700, 100, 30000, 10, 90000,salesTeam);
 		Aurelio.addToMyTeam(Mario); //verificar cuando la persona NO sea SalesRep 
-		Aurelio.addToMyTeam(Alberto);
-		Aurelio.addToMyTeam(Victor);
+		Aurelio.addToMyTeam(Alberto);//Aurelio..addToMyTeam(new SalesRep("Alberto", "Garnica", 444, 23, 600, 10, 9000, 1, 6000));
+		Aurelio.addToMyTeam(Victor);//Puedo agregar directamemente asi como arriba
 		Aurelio.addToMyTeam(Teresa);
 		Aurelio.addToMyTeam(Lucia);
 		
@@ -45,12 +45,9 @@ public class Main {
 		
 		
 		
-		
-		
-		
-	}
+	}//main
 
-}
+}// class Main
 
 
 
